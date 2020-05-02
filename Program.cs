@@ -16,8 +16,7 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Form1 loginForm = new Form1();
-            Application.Run(loginForm);
+            Application.Run(new Form1());
         }
     }
 }

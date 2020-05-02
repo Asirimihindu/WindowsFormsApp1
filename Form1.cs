@@ -17,35 +17,21 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonLogin_Click(object sender, EventArgs e)
         {
-
-            if (textBox1.Text==Properties.Settings.Default.password)
+              if (Properties.Settings.Default.password == textBoxPassword.Text & Properties.Settings.Default.username== textBoxUserName.Text)
             {
-                Main_Form mainform = new Main_Form();
+                Form2 mainform = new Form2(this);
                 mainform.Show();
                 this.Hide();
-                
-
             }
             else
             {
-                MessageBox.Show("Access Denied");
-
+                //MessageBox is a class , show is method/function 
+                MessageBox.Show("Acess denied. Sorry!");
+              
             }
 
-            
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            
 
         }
     }
